@@ -1,43 +1,60 @@
-# VivaWallet
+## Viva Wallet
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/viva_wallet`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Gem Version](https://badge.fury.io/rb/viva_wallet.svg)](https://badge.fury.io/rb/viva_wallet)
 
-TODO: Delete this and the text above, and describe your gem
+A Ruby wrapper for the Viva Wallet Smart Checkout API.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add module to your Gemfile:
 
 ```ruby
 gem 'viva_wallet'
 ```
 
-And then execute:
+Then run bundle to install the Gem:
 
-    $ bundle install
+```sh
+bundle install
+```
 
-Or install it yourself as:
+Set up an initializer file with your Viva Wallet Smart Checkout client keys:
 
-    $ gem install viva_wallet
+```ruby
+VivaWallet.client_id  = 'viva_client_id'
+VivaWallet.client_secret = 'v1'
+VivaWallet.test_mode  = "true or false"
+```
+e.g. *config/initializers/viva_wallet.rb*
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem provides a collection of operations for use within the Viva Wallet Smarket Checkout API.
 
-## Development
+### Generate API access token
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Use OAuth to generate new API access for an account
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+VivaWallet::Authentication.oauth
+````
 
-## Contributing
+### Payments
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/viva_wallet. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/viva_wallet/blob/master/CODE_OF_CONDUCT.md).
+Create a Payment Order
 
-## License
+```ruby
+VivaWallet::Payment.create(payment_order_params)
+````
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+## How to contribute
 
-## Code of Conduct
+* Fork the project
+* Create your feature or bug fix
+* Add the requried tests for it.
+* Commit (do not change version or history)
+* Send a pull request against the *development* branch
 
-Everyone interacting in the VivaWallet project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/viva_wallet/blob/master/CODE_OF_CONDUCT.md).
+## Copyright
+Copyright (c) 2022 [Tom Dallimore](http://www.tomdallimore.com/?utm_source=viva_wallet&utm_medium=website&utm_campaign=tomdallimore) ([@tom_dallimore](http://twitter.com/tom_dallimore))  
+Licenced under the MIT licence.

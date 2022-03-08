@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tom Dallimore"]
   spec.email         = ["me@tomdallimore.com"]
 
-  spec.summary       = "Ruby wrapper for the Viva Wallet payment API."
-  spec.description   = "Ruby wrapper for the Viva Wallet payment API."
+  spec.summary       = "A Ruby wrapper for the Viva Wallet Smart Checkout API."
+  spec.description   = "A Ruby wrapper for the Viva Wallet Smart Checkout API."
   spec.homepage      = "https://github.com/Jellyfishboy/viva_wallet"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")

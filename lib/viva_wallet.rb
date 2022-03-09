@@ -41,7 +41,7 @@ module VivaWallet
     end
 
     def client_base64
-      Base64.encode64("#{VivaWallet.client_id}:#{VivaWallet.client_secret}")
+      Base64.encode64("#{VivaWallet.client_id}:#{VivaWallet.client_secret}".gsub("\n", ""))
     end
 
     def request(method, resource, params = {}, access_token = nil)

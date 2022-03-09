@@ -7,11 +7,11 @@ module VivaWallet
       def oauth
         RestClient::Request.new({
                                   method: :post,
-                                  url: VivaWallet.account_api_base + 'connect/token?grant_type=client_credentials',
+                                  url: VivaWallet.account_api_base + 'connect/token',
+                                  payload: {grant_type: 'client_credentials'},
                                   headers: {
-                                    accept: :json,
-                                    content_type: :json,
-                                    'Authorization': "Bearer #{VivaWallet.client_base64}"
+                                    content_type: 'application/x-www-form-urlencoded',
+                                    Authorization: "Basic #{VivaWallet.client_base64}"
                                   }
                                 }).execute do |response, request, result|
           str_response = response.to_str

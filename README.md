@@ -23,6 +23,7 @@ Set up an initializer file with your Viva Wallet Smart Checkout client keys:
 ```ruby
 VivaWallet.client_id  = 'viva_client_id'
 VivaWallet.client_secret = 'viva_client_secret'
+VivaWallet.source_code = 'website_app_source_code'
 VivaWallet.test_mode  = true/false
 ```
 e.g. *config/initializers/viva_wallet.rb*

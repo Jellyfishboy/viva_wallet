@@ -14,7 +14,8 @@ module VivaWallet
   class ConfigurationError < VivaWalletError; end
 
   class << self
-    attr_writer :client_id, :client_secret, :test_mode, :api_base, :account_api_base, :client_base64
+    attr_writer :client_id, :client_secret, :source_code, :test_mode,
+                :api_base, :account_api_base, :client_base64
 
     def client_id
       defined? @client_id and @client_id or raise(
@@ -25,6 +26,12 @@ module VivaWallet
     def client_secret
       defined? @client_secret and @client_secret or raise(
         ConfigurationError, "VivaWallet client_secret not configured"
+      )
+    end
+
+    def source_code
+      defined? @source_code and @source_code or raise(
+        ConfigurationError, "VivaWallet source_code not configured"
       )
     end
 

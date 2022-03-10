@@ -52,9 +52,6 @@ module VivaWallet
     end
 
     def request(method, resource, params = {}, access_token = nil)
-      access_token = access_token
-
-      params.except!(:access_token)
 
       defined? method or raise(
         ArgumentError, "Request method has not been specified"

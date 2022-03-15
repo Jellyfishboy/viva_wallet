@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module VivaWallet
-  class Payment
+  class Event
 
     class << self
 

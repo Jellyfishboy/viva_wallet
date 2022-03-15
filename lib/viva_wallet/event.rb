@@ -18,9 +18,9 @@ module VivaWallet
         when 10001
           { reason: 'Refer to card issuer', explanation: 'The issuing bank prevented the transaction.', type: 'Issuer' }
         when 10003
-          { reason: 'Invalid merchant number', explanation: '	Security violation (source is not correct issuer).', type: 'Issuer' }
+          { reason: 'Invalid merchant number', explanation: 'Security violation (source is not correct issuer).', type: 'Issuer' }
         when 10004
-          { reason: '	Pick up card', explanation: 'The card has been designated as lost or stolen.', type: 'Issuer' }
+          { reason: 'Pick up card', explanation: 'The card has been designated as lost or stolen.', type: 'Issuer' }
         when 10005
           { reason: 'Do not honor', explanation: 'The issuing bank declined the transaction without an explanation.', type: 'Issuer' }
         when 10006
@@ -40,7 +40,7 @@ module VivaWallet
         when 10043
           { reason: 'Stolen card', explanation: 'The card has been designated as lost or stolen.', type: 'User' }
         when 10051
-          { reason: 'Insufficient funds', explanation: '	The card has insufficient funds to cover the cost of the transaction.', type: 'Issuer' }
+          { reason: 'Insufficient funds', explanation: 'The card has insufficient funds to cover the cost of the transaction.', type: 'Issuer' }
         when 10054
           { reason: 'Expired card', explanation: 'The payment gateway declined the transaction because the expiration date is expired or does not match.', type: 'User' }
         when 10057
@@ -50,7 +50,7 @@ module VivaWallet
         when 10061
           { reason: 'Withdrawal limit exceeded', explanation: 'Exceeds withdrawal amount limit.', type: 'Issuer' }
         when 10062
-          { reason: 'Restricted card', explanation: '	The customer\'s bank has declined their card.', type: 'Issuer' }
+          { reason: 'Restricted card', explanation: 'The customer\'s bank has declined their card.', type: 'Issuer' }
         when 10063
           { reason: 'Issuer response security violation', explanation: 'Flag raised due to security validation problem.', type: 'Issuer' }
         when 10065

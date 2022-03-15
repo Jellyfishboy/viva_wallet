@@ -5,6 +5,7 @@ require 'base64'
 
 require_relative "viva_wallet/version"
 require_relative 'viva_wallet/authentication'
+require_relative 'viva_wallet/event'
 require_relative 'viva_wallet/payment'
 
 module VivaWallet
